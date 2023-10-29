@@ -1,0 +1,45 @@
+services:
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  phpMyAdmin:
+    image: phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+      PMA_Arbitrary: 1
+# USAGE:
+# docker compose up
+# then connect to myphpadmin on localhost:8080 from a browser
+# login with root:root
+
+# To connect to using a driver(for example VSCode SQLTools with MySQL), use the following:
+# host: localhost
+# port: 3306
+# username: root
+# password: root
+# database: dealership
+
+# other commands that may be useful:
+
+# docker container ls (shows the port and the container id)
+# get the mysql container ip
+# docker inspect <mysql_container_id>
+
+# Connect to the mysql container from the terminal
+# docker exec -it <mysql_container_id> bash
+
+# Connect to the mysql from the terminal
+# mysql -u root -p (password: root)
+
+# Find the version of the mysql
+# mysql --version
+
+# Create a database
+# CREATE DATABASE dealership;
+
