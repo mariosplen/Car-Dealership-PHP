@@ -14,7 +14,8 @@ services:
     environment:
       PMA_Arbitrary: 1
 # USAGE:
-# docker compose up
+# download docker desktop, and make sure the engine is running
+# while on the yml folder run: docker compose up
 # then connect to myphpadmin on localhost:8080 from a browser
 # login with root:root
 
