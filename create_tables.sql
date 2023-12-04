@@ -69,3 +69,17 @@ CREATE TABLE IF NOT EXISTS Sale_Misc (
     FOREIGN KEY (Customer_ID) REFERENCES Customer(ID),
     FOREIGN KEY (Salesperson_ID) REFERENCES Salesperson(ID)
 );
+
+
+-- Auto update number of vehicle models per category
+-- ######################################################
+
+CREATE TRIGGER update_category_increase
+    AFTER INSERT ON Car
+    FOR EACH ROW
+    UPDATE Category SET Number_Of = Number_Of + 1 WHERE ID = NEW.Category_ID;
+
+CREATE TRIGGER update_category_decrease
+    AFTER DELETE ON Car
+    FOR EACH ROW
+    UPDATE Category SET Number_Of = Number_Of - 1 WHERE ID = OLD.Category_ID;

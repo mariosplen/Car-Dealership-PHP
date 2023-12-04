@@ -1,20 +1,20 @@
 
 INSERT INTO Category (Name, Number_Of)
-VALUES ('Car', 5);
+VALUES ('Car', 0);
 
 
 INSERT INTO Category (Name, Number_Of)
-VALUES ('Bike', 3);
+VALUES ('Bike', 0);
 
 
 INSERT INTO Category (Name, Number_Of)
-VALUES ('Truck', 3);
+VALUES ('Truck', 0);
 
 INSERT INTO Category (Name, Number_Of)
-VALUES ('Motorcycle', 9);
+VALUES ('Motorcycle', 0);
 
 INSERT INTO Category (Name, Number_Of)
-VALUES ('Van', 5);
+VALUES ('Van', 0);
 
 -- ######################################################
 
