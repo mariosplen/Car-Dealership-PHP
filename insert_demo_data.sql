@@ -8,7 +8,13 @@ VALUES ('Bike', 3);
 
 
 INSERT INTO Category (Name, Number_Of)
-VALUES ('Truck', 2);
+VALUES ('Truck', 3);
+
+INSERT INTO Category (Name, Number_Of)
+VALUES ('Motorcycle', 9);
+
+INSERT INTO Category (Name, Number_Of)
+VALUES ('Van', 5);
 
 -- ######################################################
 
@@ -77,10 +83,43 @@ VALUES ('T002', 'Tacoma', 2500, 'Black', 25000, 3, 1);
 INSERT INTO Credentials (Username, Password)
 VALUES ('admin', 'admin');
 
+INSERT INTO Credentials (Username, Password)
+VALUES ('enerik', 'enerik');
+
+
+INSERT INTO Credentials (Username, Password)
+VALUES ('kwstas', 'kwstas');
+
+
+INSERT INTO Credentials (Username, Password)
+VALUES ('marios', 'marios');
+
+
+INSERT INTO Credentials (Username, Password)
+VALUES ('giwrgos', 'giwrgos');
+
+
+
 -- ######################################################
 
 INSERT INTO Salesperson (Name, Email, Credentials_ID)
 VALUES ('John Wick', 'jwicl@cs.ihu.gr', 1);
+
+
+INSERT INTO Salesperson (Name, Email, Credentials_ID)
+VALUES ('kwstas damianos', 'kwstas@cs.ihu.gr', 2);
+
+INSERT INTO Salesperson (Name, Email, Credentials_ID)
+VALUES ('Enerik Kotsi', 'enerik@cs.ihu.gr', 3);
+
+INSERT INTO Salesperson (Name, Email, Credentials_ID)
+VALUES ('Marios Plenchidis', 'marios@cs.ihu.gr', 4);
+
+INSERT INTO Salesperson (Name, Email, Credentials_ID)
+VALUES ('John Jogb', 'john@cs.ihu.gr', 5);
+
+
+
 
 -- ######################################################
 
@@ -90,6 +129,20 @@ VALUES ('John Doe', '2020-01-01');
 
 INSERT INTO Customer (Name, Date_Registered)
 VALUES ('Jane Smith', '2020-01-02');
+
+INSERT INTO Customer (Name, Date_Registered)
+VALUES ('John Lat', '2020-01-03');
+
+
+INSERT INTO Customer (Name, Date_Registered)
+VALUES ('George Smith', '2020-01-04');
+
+
+INSERT INTO Customer (Name, Date_Registered)
+VALUES ('George Georgiou', '2020-01-05');
+
+
+
 
 -- ######################################################
 
@@ -102,7 +155,15 @@ VALUES ('C002', 1, 1, '2020-01-02');
 
 
 INSERT INTO Sale (Car_ID, Customer_ID, Salesperson_ID, Date)
-VALUES ('C001', 2, 1, '2020-01-03');
+VALUES ('T002', 2, 1, '2020-01-03');
+
+
+INSERT INTO Sale (Car_ID, Customer_ID, Salesperson_ID, Date)
+VALUES ('C003', 2, 2, '2023-01-02');
+
+
+INSERT INTO Sale (Car_ID, Customer_ID, Salesperson_ID, Date)
+VALUES ('T002', 3, 3, '2023-01-04');
 
 -- ######################################################
 
@@ -117,6 +178,13 @@ VALUES ('Engine', 1000);
 INSERT INTO Spare_Part (Name, Price)
 VALUES ('Brake', 200);
 
+INSERT INTO Spare_Part (Name, Price)
+VALUES ('wheel', 50);
+
+
+INSERT INTO Spare_Part (Name, Price)
+VALUES ('Battery', 1200);
+
 -- ######################################################
 
 INSERT INTO Sale_Misc (Spare_Part_ID, Customer_ID, Salesperson_ID, Date)
@@ -125,3 +193,14 @@ VALUES (1, 1, 1, '2020-01-01');
 
 INSERT INTO Sale_Misc (Spare_Part_ID, Customer_ID, Salesperson_ID, Date)
 VALUES (2, 1, 1, '2020-01-02');
+
+INSERT INTO Sale_Misc (Spare_Part_ID, Customer_ID, Salesperson_ID, Date)
+VALUES (4, 3, 1, '2020-01-01');
+
+
+INSERT INTO Sale_Misc (Spare_Part_ID, Customer_ID, Salesperson_ID, Date)
+VALUES (2, 3, 1, '2020-01-02');
+
+
+INSERT INTO Sale_Misc (Spare_Part_ID, Customer_ID, Salesperson_ID, Date)
+VALUES (1, 1, 1, '2020-01-01');
