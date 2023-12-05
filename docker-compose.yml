@@ -6,7 +6,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/database/init.sql
+      - ./database/init_create_inserts_demo.sql:/docker-entrypoint-initdb.d/init.sql
   phpMyAdmin:
     image: phpmyadmin
     ports:

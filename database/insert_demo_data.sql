@@ -80,23 +80,25 @@ VALUES ('T002', 'Tacoma', 2500, 'Black', 25000, 3, 1);
 
 -- ######################################################
 
+-- The Hashed password is genereated using bcrypt algorithm with cost of 10
+-- Each password is the same as the username decrypted (for demo purposes)
 INSERT INTO Credentials (Username, Password)
-VALUES ('admin', 'admin');
+VALUES ('admin', '$2a$10$1l5WT40VuQG1kmeGyym84OtnhKYQS84cDBUTqB1TTHN6ErZltHlWe'); 
 
 INSERT INTO Credentials (Username, Password)
-VALUES ('enerik', 'enerik');
-
-
-INSERT INTO Credentials (Username, Password)
-VALUES ('kwstas', 'kwstas');
+VALUES ('enerik', '$2a$10$xLiDGA5wGpILx37U0fm1/.B83XRE0640GcBYbyCe36Yg2RwLKjeR.');
 
 
 INSERT INTO Credentials (Username, Password)
-VALUES ('marios', 'marios');
+VALUES ('kwstas', '$2a$10$puEC3.xerktipTx6vmlfQe9rLWda59YN3R08Hc/Bq.k0dDLFAcJbS');
 
 
 INSERT INTO Credentials (Username, Password)
-VALUES ('giwrgos', 'giwrgos');
+VALUES ('marios', '$2a$10$qslCYDk9brR87b9A5td9Y.nruQiyAii0CjXwDgKaMy/9HXqbhq4mG');
+
+
+INSERT INTO Credentials (Username, Password)
+VALUES ('giwrgos', '$2a$10$UH51fCAGWF8ryu77ERGv0.FFWWEx4x6xYUR1js53cK5BCTepBpVc2');
 
 
 
@@ -107,7 +109,7 @@ VALUES ('John Wick', 'jwicl@cs.ihu.gr', 1);
 
 
 INSERT INTO Salesperson (Name, Email, Credentials_ID)
-VALUES ('kwstas damianos', 'kwstas@cs.ihu.gr', 2);
+VALUES ('Kwstas Damianos', 'kwstas@cs.ihu.gr', 2);
 
 INSERT INTO Salesperson (Name, Email, Credentials_ID)
 VALUES ('Enerik Kotsi', 'enerik@cs.ihu.gr', 3);
