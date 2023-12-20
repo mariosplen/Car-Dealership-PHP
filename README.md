@@ -2,8 +2,8 @@
 
 ## The ER-DIagram
 
-![ER-Diagram](ER-Diagram.png)
+![ER-Diagram](database/schema/ER-Diagram.png)
 
 ## Database Schema
 
-![Database Schema](Database-Schema.png)
+![Database Schema](database/schema/Database-Schema.png)

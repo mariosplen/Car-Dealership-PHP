@@ -12,3 +12,7 @@ AS
          INNER JOIN Sale
                  ON Car.id = Sale.car_id
   GROUP  BY Car.id; 
+
+
+SELECT  * FROM car_sales_view;
+
