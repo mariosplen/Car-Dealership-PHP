@@ -9,17 +9,20 @@ if ($conn->connect_error) {
   
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $number = $_POST['number'];
 
-    $sql = "INSERT INTO Category (Name, Number_Of) VALUES ('$name', $number)";
+    $id = $_GET['id'];
+    $item = $_GET['item'];
+
+    $sql = "DELETE FROM $item WHERE ID = '$id'";
 
     if ($conn->query($sql) === TRUE) {
         header('Location: / ');
+
+
+        
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+    
 }
 
 

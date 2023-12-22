@@ -20,10 +20,10 @@ CREATE TABLE IF NOT EXISTS Car(
     Weight INT(4) NOT NULL,
     Color VARCHAR(12) NOT NULL,
     Price FLOAT NOT NULL,
-    Category_ID INT NOT NULL,
-    Manufacturer_ID INT NOT NULL,
-    FOREIGN KEY (Category_ID) REFERENCES Category(ID),
-    FOREIGN KEY (Manufacturer_ID) REFERENCES Manufacturer(ID)
+    Category_ID INT  NULL,
+    Manufacturer_ID INT  NULL,
+    FOREIGN KEY (Category_ID) REFERENCES Category(ID) ON DELETE SET NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES Manufacturer(ID) ON DELETE SET NULL
 );
 
 CREATE TABLE IF NOT EXISTS Credentials (
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS Sale (
     Customer_ID INT NOT NULL,
     Salesperson_ID INT NOT NULL,
     Date DATE NOT NULL,
-    FOREIGN KEY (Car_ID) REFERENCES Car(ID),
+    FOREIGN KEY (Car_ID) REFERENCES Car(ID) ON DELETE CASCADE,
     FOREIGN KEY (Customer_ID) REFERENCES Customer(ID),
     FOREIGN KEY (Salesperson_ID) REFERENCES Salesperson(ID)
 );

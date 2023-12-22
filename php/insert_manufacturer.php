@@ -10,10 +10,10 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $number = $_POST['number'];
+    $man_name = $_POST['man_name'];
+    $country = $_POST['country'];
 
-    $sql = "INSERT INTO Category (Name, Number_Of) VALUES ('$name', $number)";
+    $sql = "INSERT INTO  Manufacturer(Name, Country) VALUES ('$man_name', '$country')";
 
     if ($conn->query($sql) === TRUE) {
         header('Location: / ');
