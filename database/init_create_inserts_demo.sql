@@ -75,6 +75,9 @@ CREATE TABLE IF NOT EXISTS Sale_Misc (
 );
 
 
+
+
+
 -- Auto update number of vehicle models per category
 -- ######################################################
 
